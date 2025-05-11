@@ -20,7 +20,7 @@ app = FastAPI(
 # Enable CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://bssrv.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -251,4 +251,4 @@ async def health():
             name: kb.vector_store is not None
             for name, kb in knowledge_bases.items()
         }
-    } 
+    }
